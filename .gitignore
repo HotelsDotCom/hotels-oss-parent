@@ -1,0 +1,27 @@
+#Eclipse files
+.classpath
+.settings
+.project
+
+# Idea files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Netbeans files
+nbactions.xml
+
+# Maven target folder
+target/
+
+# Eclipse build folder
+bin/
+
+# MAC stuff
+.DS_Store
+
+# jenv
+.java-version
+
+output
