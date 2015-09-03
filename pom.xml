@@ -12,8 +12,15 @@
   <artifactId>hotels-oss-parent</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-
+  <url>https://github.com/HotelsDotCom/hotels-oss-parent</url>
   <inceptionYear>2015</inceptionYear>
+
+  <scm>
+    <connection>scm:git:git@github.com:HotelsDotCom/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:git@github.com:HotelsDotCom/${project.artifactId}.git</developerConnection>
+    <url>https://github.com/HotelsDotCom/hotels-oss-parent</url>
+    <tag>HEAD</tag>
+  </scm>
 
   <organization>
     <name>Hotels.com (Data Platform Team)</name>
