@@ -9,7 +9,7 @@
 
   <groupId>com.hotels</groupId>
   <artifactId>hotels-oss-parent</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <url>https://github.com/HotelsDotCom/hotels-oss-parent</url>
   <inceptionYear>2015</inceptionYear>
