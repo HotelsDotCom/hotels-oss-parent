@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -9,7 +10,7 @@
 
   <groupId>com.hotels</groupId>
   <artifactId>hotels-oss-parent</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <url>https://github.com/HotelsDotCom/hotels-oss-parent</url>
   <inceptionYear>2015</inceptionYear>
@@ -34,23 +35,25 @@
   </licenses>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jdk.version>1.7</jdk.version>
-    <maven.compiler.plugin.version>3.0</maven.compiler.plugin.version>
-    <maven.jar.plugin.version>2.3.2</maven.jar.plugin.version>
-    <maven.release.plugin.version>2.3.2</maven.release.plugin.version>
-    <maven.dependency.plugin.version>2.8</maven.dependency.plugin.version>
+    <buildnumber.maven.plugin.version>1.4</buildnumber.maven.plugin.version>
     <cobertura.version>2.0.3</cobertura.version>
     <cobertura.maven.plugin.version>2.6</cobertura.maven.plugin.version>
-    <maven.site.plugin.version>3.0</maven.site.plugin.version>
-    <maven.project.info.reports.plugin.version>2.4</maven.project.info.reports.plugin.version>
+    <failsafe.maven.plugin.version>2.4.3-alpha-1</failsafe.maven.plugin.version>
+    <findbugs.maven.plugin.version>2.5.3</findbugs.maven.plugin.version>    
+    <hotels.oss.plugin.config.version>1.0.3</hotels.oss.plugin.config.version>
+    <jdk.version>1.7</jdk.version>
+    <license.maven.plugin.version>2.11</license.maven.plugin.version>
+    <maven.checkstyle.plugin.version>2.10</maven.checkstyle.plugin.version>
+    <maven.compiler.plugin.version>3.0</maven.compiler.plugin.version>
+    <maven.dependency.plugin.version>2.8</maven.dependency.plugin.version>
+    <maven.jar.plugin.version>2.3.2</maven.jar.plugin.version>
+    <maven.javadoc.plugin.version>2.9.1</maven.javadoc.plugin.version>
     <maven.jxr.plugin.version>2.3</maven.jxr.plugin.version>
     <maven.pmd.plugin.version>2.7.1</maven.pmd.plugin.version>
-    <findbugs.maven.plugin.version>2.5.3</findbugs.maven.plugin.version>
-    <maven.javadoc.plugin.version>2.9.1</maven.javadoc.plugin.version>
-    <maven.checkstyle.plugin.version>2.10</maven.checkstyle.plugin.version>
-    <failsafe-maven-plugin.version>2.4.3-alpha-1</failsafe-maven-plugin.version>
-    <hotels.oss.plugin.config.version>1.0.2</hotels.oss.plugin.config.version>
+    <maven.project.info.reports.plugin.version>2.4</maven.project.info.reports.plugin.version>
+    <maven.release.plugin.version>2.3.2</maven.release.plugin.version>
+    <maven.site.plugin.version>3.0</maven.site.plugin.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <build>
@@ -176,10 +179,30 @@
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
       </plugin>
+
+      <!-- used to determine the current year -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>buildnumber-maven-plugin</artifactId>
+        <version>${buildnumber.maven.plugin.version}</version>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>create-timestamp</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <timestampFormat>yyyy</timestampFormat>
+          <timestampPropertyName>current.year</timestampPropertyName>
+        </configuration>
+      </plugin>
+
       <plugin>
         <groupId>com.mycila</groupId>
         <artifactId>license-maven-plugin</artifactId>
-        <version>2.10</version>
+        <version>${license.maven.plugin.version}</version>
         <dependencies>
           <dependency>
             <groupId>com.hotels</groupId>
@@ -194,6 +217,7 @@
           </headerDefinitions>
           <properties>
             <owner>Expedia Inc.</owner>
+            <currentYear>${current.year}</currentYear>
           </properties>
           <includes>
             <include>src/main/java/**</include>
@@ -218,7 +242,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>failsafe-maven-plugin</artifactId>
-          <version>${failsafe-maven-plugin.version}</version>
+          <version>${failsafe.maven.plugin.version}</version>
           <executions>
             <execution>
               <id>integration-test</id>
@@ -234,6 +258,7 @@
             </execution>
           </executions>
         </plugin>
+        
         <plugin>
           <groupId>org.eclipse.m2e</groupId>
           <artifactId>lifecycle-mapping</artifactId>
@@ -241,11 +266,29 @@
           <configuration>
             <lifecycleMappingMetadata>
               <pluginExecutions>
+                
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>buildnumber-maven-plugin</artifactId>
+                    <versionRange>${buildnumber.maven.plugin.version}</versionRange>
+                    <goals>
+                      <goal>create-timestamp</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <execute>
+                      <runOnConfiguration>true</runOnConfiguration>
+                      <runOnIncremental>true</runOnIncremental>
+                    </execute>
+                  </action>
+                </pluginExecution>
+                
                 <pluginExecution>
                   <pluginExecutionFilter>
                     <groupId>com.mycila</groupId>
                     <artifactId>license-maven-plugin</artifactId>
-                    <versionRange>2.10</versionRange>
+                    <versionRange>${license.maven.plugin.version}</versionRange>
                     <goals>
                       <goal>format</goal>
                     </goals>
@@ -254,6 +297,7 @@
                     <execute />
                   </action>
                 </pluginExecution>
+                
               </pluginExecutions>
             </lifecycleMappingMetadata>
           </configuration>
