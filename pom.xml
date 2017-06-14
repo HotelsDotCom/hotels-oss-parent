@@ -38,7 +38,7 @@
     <cobertura.version>2.0.3</cobertura.version>
     <cobertura.maven.plugin.version>2.6</cobertura.maven.plugin.version>
     <failsafe.maven.plugin.version>2.4.3-alpha-1</failsafe.maven.plugin.version>
-    <findbugs.maven.plugin.version>2.5.3</findbugs.maven.plugin.version>    
+    <findbugs.maven.plugin.version>3.0.4</findbugs.maven.plugin.version>    
     <hotels.oss.plugin.config.version>1.0.4</hotels.oss.plugin.config.version>
     <jdk.version>1.7</jdk.version>
     <license.maven.plugin.version>3.0</license.maven.plugin.version>
@@ -155,7 +155,7 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>${maven.javadoc.plugin.version}</version>
         <configuration>
-          <encoding>UTF-8</encoding>
+          <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
         <executions>
           <execution>
@@ -310,6 +310,37 @@
     </pluginManagement>
   </build>
 
+  <profiles>
+    <profile>
+      <id>doclint-java8-disable</id>
+      <activation>
+        <jdk>[1.8,)</jdk>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <configuration>
+              <additionalparam>-Xdoclint:none</additionalparam>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+      <reporting>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <configuration>
+              <additionalparam>-Xdoclint:none</additionalparam>
+            </configuration>
+          </plugin>
+        </plugins>
+      </reporting>
+    </profile>
+  </profiles>
+  
   <reporting>
     <plugins>
       <plugin>
