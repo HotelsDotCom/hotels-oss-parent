@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+[2.0.0] - 2017-07-12
+### Changed
+- Updated to the newest version for all plugins which have had releases since the latest update.
+
 ## [1.2.0] - 2017-06-14
 ### Added
 - Change log.
