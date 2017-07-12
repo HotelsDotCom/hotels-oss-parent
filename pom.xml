@@ -39,7 +39,7 @@
     <cobertura.maven.plugin.version>2.7</cobertura.maven.plugin.version>
     <failsafe.maven.plugin.version>2.20</failsafe.maven.plugin.version>
     <findbugs.maven.plugin.version>3.0.4</findbugs.maven.plugin.version> 
-    <hotels.oss.plugin.config.version>1.1.0-SNAPSHOT</hotels.oss.plugin.config.version>
+    <hotels.oss.plugin.config.version>1.1.0</hotels.oss.plugin.config.version>
     <jdk.version>1.7</jdk.version>
     <license.maven.plugin.version>3.0</license.maven.plugin.version>  
     <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
