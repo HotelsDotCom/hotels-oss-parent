@@ -34,7 +34,7 @@
   </licenses>
 
   <properties>
-	<buildnumber.maven.plugin.version>1.4</buildnumber.maven.plugin.version>
+    <buildnumber.maven.plugin.version>1.4</buildnumber.maven.plugin.version>
     <cobertura.version>2.1.1</cobertura.version>
     <cobertura.maven.plugin.version>2.7</cobertura.maven.plugin.version>
     <failsafe.maven.plugin.version>2.20</failsafe.maven.plugin.version>
