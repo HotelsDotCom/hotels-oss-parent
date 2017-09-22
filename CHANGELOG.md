@@ -4,8 +4,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## Unreleased
-
 ## [2.0.1] - 2017-09-22
 ### Changed
 - Add test.arguments parameter for surefire plugin
