@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [2.0.2] - 2017-09-25
 ### Changed 
 - Name ${test.arguments} -> test.arguments in surefire plugin profile
+- maven-surefire-plugin version set to 2.20.1
 
 ## [2.0.1] - 2017-09-22 [YANKED]
 ### Changed
