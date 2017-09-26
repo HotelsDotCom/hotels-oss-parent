@@ -4,9 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [2.0.1] - 2017-09-22
+## [2.0.3] - 2017-09-26
+### Changed 
+- Name ${test.arguments} -> test.arguments in surefire plugin profile.
+- maven-surefire-plugin version set to 2.20.1.
+
+## [2.0.2] - 2017-09-26 [YANKED]
+### Changed 
+- No changes, was caused by a mistaken release build.
+
+## [2.0.1] - 2017-09-22 [YANKED]
 ### Changed
-- Add test.arguments parameter for surefire plugin
+- Add test.arguments parameter for surefire plugin.
 
 ## [2.0.0] - 2017-07-12
 ### Changed
