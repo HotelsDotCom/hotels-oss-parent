@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.0.4] - TBD
+### Added
+- Added profile for sonatype oss release with gpg plugin.
+
 ## [2.0.3] - 2017-09-26
 ### Changed 
 - Name ${test.arguments} -> test.arguments in surefire plugin profile.
