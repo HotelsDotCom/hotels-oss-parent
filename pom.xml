@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -38,10 +39,10 @@
     <cobertura.version>2.1.1</cobertura.version>
     <cobertura.maven.plugin.version>2.7</cobertura.maven.plugin.version>
     <failsafe.maven.plugin.version>2.20</failsafe.maven.plugin.version>
-    <findbugs.maven.plugin.version>3.0.4</findbugs.maven.plugin.version> 
+    <findbugs.maven.plugin.version>3.0.4</findbugs.maven.plugin.version>
     <hotels.oss.plugin.config.version>1.1.0</hotels.oss.plugin.config.version>
     <jdk.version>1.7</jdk.version>
-    <license.maven.plugin.version>3.0</license.maven.plugin.version>  
+    <license.maven.plugin.version>3.0</license.maven.plugin.version>
     <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
     <maven.compiler.plugin.version>3.6.1</maven.compiler.plugin.version>
     <maven.dependency.plugin.version>3.0.1</maven.dependency.plugin.version>
@@ -54,6 +55,7 @@
     <maven.site.plugin.version>3.6</maven.site.plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.surefire.plugin.version>2.20.1</maven.surefire.plugin.version>
+    <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
   </properties>
 
   <build>
@@ -240,6 +242,20 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>${maven.gpg.plugin.version}</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
 
     <pluginManagement>
@@ -263,7 +279,7 @@
             </execution>
           </executions>
         </plugin>
-        
+
         <plugin>
           <groupId>org.eclipse.m2e</groupId>
           <artifactId>lifecycle-mapping</artifactId>
@@ -271,7 +287,7 @@
           <configuration>
             <lifecycleMappingMetadata>
               <pluginExecutions>
-                
+
                 <pluginExecution>
                   <pluginExecutionFilter>
                     <groupId>org.codehaus.mojo</groupId>
@@ -288,7 +304,7 @@
                     </execute>
                   </action>
                 </pluginExecution>
-                
+
                 <pluginExecution>
                   <pluginExecutionFilter>
                     <groupId>com.mycila</groupId>
@@ -302,7 +318,7 @@
                     <execute />
                   </action>
                 </pluginExecution>
-                
+
               </pluginExecutions>
             </lifecycleMappingMetadata>
           </configuration>
@@ -361,7 +377,7 @@
       </build>
     </profile>
   </profiles>
-  
+
   <reporting>
     <plugins>
       <plugin>
@@ -385,8 +401,9 @@
           </reportSet>
         </reportSets>
       </plugin>
-      <!-- The JXR plugin produces a cross-reference of the project's sources. The generated reports make it easier for the user to reference
-        or find specific lines of code. It is also handy when used with the PMD plugin for referencing errors found in the code. -->
+      <!-- The JXR plugin produces a cross-reference of the project's sources. The generated reports make it easier for the 
+        user to reference or find specific lines of code. It is also handy when used with the PMD plugin for referencing errors found 
+        in the code. -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jxr-plugin</artifactId>
