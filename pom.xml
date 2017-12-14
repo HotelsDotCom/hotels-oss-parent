@@ -37,7 +37,7 @@
     <buildnumber.maven.plugin.version>1.4</buildnumber.maven.plugin.version>
     <cobertura.version>2.1.1</cobertura.version>
     <cobertura.maven.plugin.version>2.7</cobertura.maven.plugin.version>
-    <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
+    <coveralls.maven.plugin.version>4.3.0</coveralls.maven.plugin.version>
     <failsafe.maven.plugin.version>2.20</failsafe.maven.plugin.version>
     <findbugs.maven.plugin.version>3.0.4</findbugs.maven.plugin.version>
     <hotels.oss.plugin.config.version>1.1.0</hotels.oss.plugin.config.version>
