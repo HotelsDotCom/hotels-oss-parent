@@ -176,8 +176,7 @@
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>${maven.checkstyle.plugin.version}</version>
         <configuration>
-          <configLocation>file://${project.build.directory}/plugin-config/checkstyle/hotels-checkstyle.xml
-          </configLocation>
+          <configLocation>file://${project.build.directory}/plugin-config/checkstyle/hotels-checkstyle.xml</configLocation>
         </configuration>
       </plugin>
       <plugin>
@@ -247,8 +246,7 @@
         <configuration>
           <header>file://${project.build.directory}/plugin-config/mycila/APACHE-2.txt</header>
           <headerDefinitions>
-            <headerDefinition>file://${project.build.directory}/plugin-config/mycila/hotels-definitions.xml
-            </headerDefinition>
+            <headerDefinition>file://${project.build.directory}/plugin-config/mycila/hotels-definitions.xml</headerDefinition>
           </headerDefinitions>
           <properties>
             <owner>Expedia Inc.</owner>
@@ -493,8 +491,7 @@
         <artifactId>findbugs-maven-plugin</artifactId>
         <version>${findbugs.maven.plugin.version}</version>
         <configuration>
-          <excludeFilterFile>file://${project.build.directory}/plugin-config/findbugs/hotels-findbugs-exclude.xml
-          </excludeFilterFile>
+          <excludeFilterFile>file://${project.build.directory}/plugin-config/findbugs/hotels-findbugs-exclude.xml</excludeFilterFile>
         </configuration>
       </plugin>
       <plugin>
@@ -502,8 +499,7 @@
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>${maven.checkstyle.plugin.version}</version>
         <configuration>
-          <configLocation>file://${project.build.directory}/plugin-config/checkstyle/hotels-checkstyle.xml
-          </configLocation>
+          <configLocation>file://${project.build.directory}/plugin-config/checkstyle/hotels-checkstyle.xml</configLocation>
         </configuration>
       </plugin>
     </plugins>
