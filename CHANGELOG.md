@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.0.6] - TBA
+### Added
+- Added support for JaCoCo coverage reports.
+
 ## [2.0.6] - 2017-12-14
 ### Added
 - Added a travis profile which triggers coveralls.
