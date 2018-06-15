@@ -3,7 +3,8 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
-## [2.1.1] - TBD
+
+## [2.1.1] - 2018-06-15
 ### Changed
 - Upgraded nexus-staging-maven-plugin to version 1.6.8 (was 1.6.3).
 
