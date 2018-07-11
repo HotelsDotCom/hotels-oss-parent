@@ -38,24 +38,24 @@
     <cobertura.version>2.1.1</cobertura.version>
     <cobertura.maven.plugin.version>2.7</cobertura.maven.plugin.version>
     <coveralls.maven.plugin.version>4.3.0</coveralls.maven.plugin.version>
-    <failsafe.maven.plugin.version>2.20</failsafe.maven.plugin.version>
-    <findbugs.maven.plugin.version>3.0.4</findbugs.maven.plugin.version>
+    <failsafe.maven.plugin.version>2.22.0</failsafe.maven.plugin.version>
+    <findbugs.maven.plugin.version>3.0.5</findbugs.maven.plugin.version>
     <hotels.oss.plugin.config.version>1.1.0</hotels.oss.plugin.config.version>
     <jacoco.version>0.8.1</jacoco.version>
     <jdk.version>1.7</jdk.version>
     <license.maven.plugin.version>3.0</license.maven.plugin.version>
-    <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
-    <maven.compiler.plugin.version>3.6.1</maven.compiler.plugin.version>
-    <maven.dependency.plugin.version>3.0.1</maven.dependency.plugin.version>
-    <maven.jar.plugin.version>3.0.2</maven.jar.plugin.version>
-    <maven.javadoc.plugin.version>2.10.4</maven.javadoc.plugin.version>
+    <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
+    <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
+    <maven.dependency.plugin.version>3.1.1</maven.dependency.plugin.version>
+    <maven.jar.plugin.version>3.1.0</maven.jar.plugin.version>
+    <maven.javadoc.plugin.version>3.0.1</maven.javadoc.plugin.version>
     <maven.jxr.plugin.version>2.5</maven.jxr.plugin.version>
-    <maven.pmd.plugin.version>3.8</maven.pmd.plugin.version>
-    <maven.project.info.reports.plugin.version>2.9</maven.project.info.reports.plugin.version>
+    <maven.pmd.plugin.version>3.10.0</maven.pmd.plugin.version>
+    <maven.project.info.reports.plugin.version>3.0.0</maven.project.info.reports.plugin.version>
     <maven.release.plugin.version>2.5.3</maven.release.plugin.version>
-    <maven.site.plugin.version>3.6</maven.site.plugin.version>
+    <maven.site.plugin.version>3.7.1</maven.site.plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.surefire.plugin.version>2.20.1</maven.surefire.plugin.version>
+    <maven.surefire.plugin.version>2.22.0</maven.surefire.plugin.version>
     <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
   </properties>
 
