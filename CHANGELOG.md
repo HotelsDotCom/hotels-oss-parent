@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## TBD
 ### Changed
 - Upgraded versions of plugins to the latest ones.
+- Introduced properties to control the versions of some plugins and updated those.
 
 ## [2.1.1] - 2018-06-15
 ### Changed

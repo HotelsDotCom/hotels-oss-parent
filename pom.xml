@@ -57,6 +57,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.surefire.plugin.version>2.22.0</maven.surefire.plugin.version>
     <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
+    <maven.dependency.plugin.version>3.1.1</maven.dependency.plugin.version>
+    <nexus.staging.maven.plugin.version>1.6.8</nexus.staging.maven.plugin.version>
+    <lifecycle.mapping.version>1.0.0</lifecycle.mapping.version>
   </properties>
 
   <build>
@@ -64,7 +67,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>2.9</version>
+        <version>${maven.dependency.plugin.version}</version>
         <executions>
           <execution>
             <id>unpack</id>
@@ -194,7 +197,7 @@
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.8</version>
+        <version>${nexus.staging.maven.plugin.version}</version>
         <extensions>true</extensions>
         <configuration>
           <serverId>sonatype-nexus-staging</serverId>
@@ -290,7 +293,7 @@
         <plugin>
           <groupId>org.eclipse.m2e</groupId>
           <artifactId>lifecycle-mapping</artifactId>
-          <version>1.0.0</version>
+          <version>${lifecycle.mapping.version}</version>
           <configuration>
             <lifecycleMappingMetadata>
               <pluginExecutions>
