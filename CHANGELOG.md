@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## TBD
+## [2.2.0] - 2018-07-17
 ### Changed
 - Upgraded versions of plugins to the latest ones.
 - Introduced properties to control the versions of some plugins and updated those.
