@@ -6,7 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## TBD
 ### Changed
-- Remove dependency on `org.sonatype.oss oss.parent`
+- Moved to Sonatype's updated recommendations for publishing artifacts to Maven Central. See [1#6](https://github.com/HotelsDotCom/hotels-oss-parent/issues/16).
+
+## [2.2.0] - 2018-07-17
+### Changed
+- Upgraded versions of plugins to the latest ones.
+- Introduced properties to control the versions of some plugins and updated those.
 
 ## [2.1.1] - 2018-06-15
 ### Changed
