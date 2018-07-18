@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## TBD
+### Changed
+- Moved to Sonatype's updated recommendations for publishing artifacts to Maven Central. See [1#6](https://github.com/HotelsDotCom/hotels-oss-parent/issues/16).
+
 ## [2.2.0] - 2018-07-17
 ### Changed
 - Upgraded versions of plugins to the latest ones.

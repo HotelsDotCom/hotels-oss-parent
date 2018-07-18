@@ -1,18 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>9</version>
-  </parent>
 
   <groupId>com.hotels</groupId>
   <artifactId>hotels-oss-parent</artifactId>
-  <version>2.2.1-SNAPSHOT</version>
+  <version>2.3.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <url>https://github.com/HotelsDotCom/hotels-oss-parent</url>
   <inceptionYear>2015</inceptionYear>
+  <name>Hotels.com Open Source Parent</name>
 
   <scm>
     <connection>scm:git:git@github.com:HotelsDotCom/${project.artifactId}.git</connection>
@@ -25,6 +22,14 @@
     <name>Hotels.com (Data Platform Team)</name>
     <url>http://hotels.com</url>
   </organization>
+
+  <developers>
+    <developer>
+      <name>HCom Committers</name>
+      <organization>Hotels.com</organization>
+      <organizationUrl>http://hotels.com</organizationUrl>
+    </developer>
+  </developers>
 
   <licenses>
     <license>
@@ -61,6 +66,17 @@
     <nexus.staging.maven.plugin.version>1.6.8</nexus.staging.maven.plugin.version>
     <lifecycle.mapping.version>1.0.0</lifecycle.mapping.version>
   </properties>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 
   <build>
     <plugins>
@@ -203,6 +219,17 @@
           <serverId>sonatype-nexus-staging</serverId>
           <nexusUrl>https://oss.sonatype.org/</nexusUrl>
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>${maven.release.plugin.version}</version>
+        <configuration>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <useReleaseProfile>false</useReleaseProfile>
+          <releaseProfiles>sonatype-oss-release</releaseProfiles>
+          <goals>deploy</goals>
         </configuration>
       </plugin>
 
@@ -404,6 +431,32 @@
               </execution>
             </executions>
           </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>${maven.source.plugin.version}</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>${maven.javadoc.plugin.version}</version>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
         </plugins>
       </build>
     </profile>
@@ -444,8 +497,10 @@
           </reportSet>
         </reportSets>
       </plugin>
-      <!-- The JXR plugin produces a cross-reference of the project's sources. The generated reports make it easier for the 
-        user to reference or find specific lines of code. It is also handy when used with the PMD plugin for referencing errors found 
+      <!-- The JXR plugin produces a cross-reference of the project's sources. 
+        The generated reports make it easier for the
+        user to reference or find specific lines of code. It is also handy 
+        when used with the PMD plugin for referencing errors found
         in the code. -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
