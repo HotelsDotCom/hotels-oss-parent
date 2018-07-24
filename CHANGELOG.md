@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.3.0] - 2018-07-18
 ### Changed
-- Moved to Sonatype's updated recommendations for publishing artifacts to Maven Central. See [1#6](https://github.com/HotelsDotCom/hotels-oss-parent/issues/16).
+- Moved to Sonatype's updated recommendations for publishing artifacts to Maven Central. See [#16](https://github.com/HotelsDotCom/hotels-oss-parent/issues/16).
 
 ## [2.2.0] - 2018-07-17
 ### Changed
