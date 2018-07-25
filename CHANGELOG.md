@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Changed
+- Execute maven-javadoc-plugin jar goal on snapshots. See [#18](https://github.com/HotelsDotCom/hotels-oss-parent/issues/18).
+
 ## [2.3.0] - 2018-07-18
 ### Changed
 - Moved to Sonatype's updated recommendations for publishing artifacts to Maven Central. See [#16](https://github.com/HotelsDotCom/hotels-oss-parent/issues/16).
