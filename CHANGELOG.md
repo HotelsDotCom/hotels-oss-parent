@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [TBD] - TBD
+### Fixed
+- Surefire plugin `<argLine>` keeps any pre-existing value in addition to our custom `${test.arguments}` . See [#18](https://github.com/HotelsDotCom/hotels-oss-parent/issues/20). 
+
 ## [2.3.1] - 2018-07-25
 ### Changed
 - Execute maven-javadoc-plugin jar goal on snapshots. See [#18](https://github.com/HotelsDotCom/hotels-oss-parent/issues/18).
