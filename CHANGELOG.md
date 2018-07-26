@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [TBD] - TBD
+## [2.3.2] - 2018-07-26
 ### Fixed
 - Surefire plugin `<argLine>` keeps any pre-existing value in addition to our custom `${test.arguments}`. See [#20](https://github.com/HotelsDotCom/hotels-oss-parent/issues/20). 
 
