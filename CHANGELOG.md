@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [TBD] - TBD
 ### Fixed
-- Surefire plugin `<argLine>` keeps any pre-existing value in addition to our custom `${test.arguments}` . See [#20](https://github.com/HotelsDotCom/hotels-oss-parent/issues/20). 
+- Surefire plugin `<argLine>` keeps any pre-existing value in addition to our custom `${test.arguments}`. See [#20](https://github.com/HotelsDotCom/hotels-oss-parent/issues/20). 
 
 ## [2.3.1] - 2018-07-25
 ### Changed
