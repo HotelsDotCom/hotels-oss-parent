@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## TBD
+### Changed
+- Disabled javadoc doclint correctly for this plugin version.
+
+
 ## [2.3.3] - 2018-07-27
 ### Changed
 - Allow late replacement of `$argLine` property for [Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#argLine). 
