@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [TBD]
 ### Changed
-- Updated `hotels.oss.plugin` version to 1.2.2 (was 1.1.0)
+- Updated `hotels.oss.plugin.config` version to 1.2.2 (was 1.1.0)
 
 ## [2.3.4] - 2018-12-21
 ### Changed
