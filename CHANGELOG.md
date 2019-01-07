@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [TBD]
+## [2.4.5] - 2019-01-07
 ### Changed
 - Updated `hotels.oss.plugin.config` version to 1.2.2 (was 1.1.0).
 
