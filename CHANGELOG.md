@@ -4,13 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [2.3.6] - 2019-01-24
+## [3.0.0] - TBD
 ### Changed
-- Modified `cobertura-maven-plugin` configuration in order to be not inherited by submodules.
-- Updated `jacoco-maven-plugin` version to 0.8.2 (was 0.8.1)..
-- Updated `maven-compiler-plugin` version to 3.8.0 (was 3.7.0)..
-- Added `maven-compiler-plugin` option in order to add constructor parameter's names to compiled classes.
 - Updated `jdk` version to 1.8 (was 1.7)..
+- Updated `maven-compiler-plugin` version to 3.8.0 (was 3.7.0).
+- Modified `cobertura-maven-plugin` configuration in order to be not inherited by submodules.
+- Updated `jacoco-maven-plugin` version to 0.8.2 (was 0.8.1).
+- Added `maven-compiler-plugin` option in order to add constructor parameter's names to compiled classes.
 
 ## [2.3.5] - 2019-01-07
 ### Changed
