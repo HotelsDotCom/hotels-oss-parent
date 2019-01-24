@@ -3,7 +3,7 @@
 
   <groupId>com.hotels</groupId>
   <artifactId>hotels-oss-parent</artifactId>
-  <version>2.3.6-SNAPSHOT</version>
+  <version>3.0.0-SNAPSHOT</version>
   <description>Parent POM for Hotels.com open source projects</description>
   <packaging>pom</packaging>
   <url>https://github.com/HotelsDotCom/hotels-oss-parent</url>
@@ -45,11 +45,11 @@
     <failsafe.maven.plugin.version>2.22.0</failsafe.maven.plugin.version>
     <findbugs.maven.plugin.version>3.0.5</findbugs.maven.plugin.version>
     <hotels.oss.plugin.config.version>1.2.2</hotels.oss.plugin.config.version>
-    <jacoco.version>0.8.1</jacoco.version>
-    <jdk.version>1.7</jdk.version>
+    <jacoco.version>0.8.2</jacoco.version>
+    <jdk.version>1.8</jdk.version>
     <license.maven.plugin.version>3.0</license.maven.plugin.version>
     <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
-    <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
+    <maven.compiler.plugin.version>3.8.0</maven.compiler.plugin.version>
     <maven.dependency.plugin.version>3.1.1</maven.dependency.plugin.version>
     <maven.jar.plugin.version>3.1.0</maven.jar.plugin.version>
     <maven.javadoc.plugin.version>3.0.1</maven.javadoc.plugin.version>
@@ -114,6 +114,7 @@
           <target>${jdk.version}</target>
           <encoding>${project.build.sourceEncoding}</encoding>
           <showWarnings>true</showWarnings>
+          <parameters>true</parameters>
         </configuration>
       </plugin>
       <plugin>
@@ -515,20 +516,6 @@
         <version>${maven.javadoc.plugin.version}</version>
         <configuration>
           <encoding>${project.build.sourceEncoding}</encoding>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-        <version>${cobertura.maven.plugin.version}</version>
-        <configuration>
-          <encoding>${project.build.sourceEncoding}</encoding>
-          <aggregate>true</aggregate>
-          <formats>
-            <format>html</format>
-            <format>xml</format>
-          </formats>
-          <check />
         </configuration>
       </plugin>
       <plugin>

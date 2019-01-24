@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.0] - TBD
+### Changed
+- Updated `jdk` version to 1.8 (was 1.7).
+- Removed `cobertura-maven-plugin`, from reporting sections, as it's not compatible with JDK versions greater than 1.8.
+- Updated `maven-compiler-plugin` version to 3.8.0 (was 3.7.0).
+- Updated `jacoco-maven-plugin` version to 0.8.2 (was 0.8.1).
+- Added `maven-compiler-plugin` option in order to add constructor parameters' names to compiled classes.
+
 ## [2.3.5] - 2019-01-07
 ### Changed
 - Updated `hotels.oss.plugin.config` version to 1.2.2 (was 1.1.0).
