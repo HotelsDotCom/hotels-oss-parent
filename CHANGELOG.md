@@ -5,7 +5,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [TBD] - TBD
-
 ### Changed
 - Added `maven-site-plugin` to `pluginManagement` section.
 
