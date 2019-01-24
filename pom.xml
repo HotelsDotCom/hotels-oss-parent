@@ -3,7 +3,7 @@
 
   <groupId>com.hotels</groupId>
   <artifactId>hotels-oss-parent</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1-SNAPSHOT</version>
   <description>Parent POM for Hotels.com open source projects</description>
   <packaging>pom</packaging>
   <url>https://github.com/HotelsDotCom/hotels-oss-parent</url>
@@ -14,7 +14,7 @@
     <connection>scm:git:git@github.com:HotelsDotCom/${project.artifactId}.git</connection>
     <developerConnection>scm:git:git@github.com:HotelsDotCom/${project.artifactId}.git</developerConnection>
     <url>https://github.com/HotelsDotCom/hotels-oss-parent</url>
-    <tag>hotels-oss-parent-3.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <organization>
