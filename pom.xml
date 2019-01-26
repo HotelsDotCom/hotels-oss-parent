@@ -527,6 +527,7 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
         <version>${findbugs.maven.plugin.version}</version>
+        <inherited>false</inherited>
         <configuration>
           <excludeFilterFile>file://${project.build.directory}/plugin-config/findbugs/hotels-findbugs-exclude.xml</excludeFilterFile>
         </configuration>
