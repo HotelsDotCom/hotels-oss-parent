@@ -4,9 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.1.0] - TBD
-### Changed
-- Made `findbugs-maven-plugin` optional for child modules as it is not compatible with JDK greater than 1.8.
+## [4.0.0] - TBD
+### Removed
+- Removed `findbugs-maven-plugin` from reporting as it's not compatible with JDK versions greater than 1.8.
 
 ## [3.0.1] - 2019-01-24
 ### Changed
