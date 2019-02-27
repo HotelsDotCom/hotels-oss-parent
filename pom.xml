@@ -280,7 +280,7 @@
             <headerDefinition>file://${project.build.directory}/plugin-config/mycila/hotels-definitions.xml</headerDefinition>
           </headerDefinitions>
           <properties>
-            <owner>Expedia Inc.</owner>
+            <owner>Expedia, Inc.</owner>
             <currentYear>${current.year}</currentYear>
           </properties>
           <includes>
