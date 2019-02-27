@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [TBD] - TBD
 ### Changed
-- Default Copyright line changed to "Expedia__,__ Inc.".
+- Default Copyright line changed to "Expedia, Inc.".
 
 ## [4.0.0] - 2019-01-28
 ### Removed
