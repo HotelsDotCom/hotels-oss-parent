@@ -62,7 +62,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.surefire.plugin.version>2.22.0</maven.surefire.plugin.version>
     <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
-    <maven.dependency.plugin.version>3.1.1</maven.dependency.plugin.version>
     <nexus.staging.maven.plugin.version>1.6.8</nexus.staging.maven.plugin.version>
     <lifecycle.mapping.version>1.0.0</lifecycle.mapping.version>
   </properties>
