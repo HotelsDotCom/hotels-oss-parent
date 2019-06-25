@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.1.0] - TBD
+### Added
+- Added a check-for-updates profile which verifies if there are dependencies that can be upgraded.
+### Changed
+- Updated `maven-checkstyle-plugin` version to 3.1.0 (was 3.0.0).
+- Updated `maven-compiler-plugin` version to 3.8.1 (was 3.8.0).
+- Updated `maven-jar-plugin` version to 3.1.2 (was 3.1.0).
+- Updated `maven-javadoc-plugin` version to 3.1.0 (was 3.0.1).
+- Updated `maven-jxr-plugin` version to 3.0.0 (was 2.5).
+- Updated `maven-pmd-plugin` version to 3.12.0 (was 3.10.0).
+- Updated `maven-source-plugin` version to 3.1.0 (was 3.0.1).
+- Updated `maven-surefire-plugin` version to 2.22.2 (was 2.22.0).
+- Updated `jacoco-maven-plugin` version to 0.8.4 (was 0.8.2).
+
 ## [4.0.1] - 2019-03-01
 ### Changed
 - Default Copyright line changed to "Expedia, Inc.".
