@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [4.0.2] - TBD
+## [4.1.0] - TBD
 ### Added
 - Added a check-for-updates profile which verifies if there are dependencies that can be upgraded.
 ### Changed
