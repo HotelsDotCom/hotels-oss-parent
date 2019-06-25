@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.1] - TBD
+### Added
+- Added a check-for-updates profile which verifies if there are dependencies that can be upgraded.
+### Changed
+- Updated `jdk` version to 1.8 (was 1.7).
+- Updated `maven-checkstyle-plugin` version to 3.1.0 (was 3.0.0).
+- Updated `maven-compiler-plugin` version to 3.8.1 (was 3.8.1).
+- Updated `maven-jar-plugin` version to 3.1.2 (was 3.1.0).
+- Updated `maven-javadoc-plugin` version to 3.1.0 (was 3.0.1).
+- Updated `maven-jxr-plugin` version to 3.0.0 (was 2.5).
+- Updated `maven-pmd-plugin` version to 3.12.0 (was 3.10.0).
+- Updated `maven-source-plugin` version to 3.1.0 (was 3.0.1).
+- Updated `maven-source-plugin` version to 3.1.0 (was 3.0.1).
+- Updated `jacoco-surefire-plugin` version to 2.22.2 (was 2.22.0).
+
 ## [3.0.0] - 2019-01-24
 ### Changed
 - Updated `jdk` version to 1.8 (was 1.7).
