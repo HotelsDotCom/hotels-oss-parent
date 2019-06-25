@@ -3,7 +3,7 @@
 
   <groupId>com.hotels</groupId>
   <artifactId>hotels-oss-parent</artifactId>
-  <version>3.0.1-SNAPSHOT</version>
+  <version>4.0.2-SNAPSHOT</version>
   <description>Parent POM for Hotels.com open source projects</description>
   <packaging>pom</packaging>
   <url>https://github.com/HotelsDotCom/hotels-oss-parent</url>
@@ -65,7 +65,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
     <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
-    <maven.dependency.plugin.version>3.1.1</maven.dependency.plugin.version>
     <nexus.staging.maven.plugin.version>1.6.8</nexus.staging.maven.plugin.version>
     <lifecycle.mapping.version>1.0.0</lifecycle.mapping.version>
   </properties>
@@ -283,7 +282,7 @@
             <headerDefinition>file://${project.build.directory}/plugin-config/mycila/hotels-definitions.xml</headerDefinition>
           </headerDefinitions>
           <properties>
-            <owner>Expedia Inc.</owner>
+            <owner>Expedia, Inc.</owner>
             <currentYear>${current.year}</currentYear>
           </properties>
           <includes>
@@ -305,27 +304,16 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
-        <version>${maven.enforcer.plugin.version}</version>
-        <executions>
-          <execution>
-            <id>enforce-maven</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <requireMavenVersion>
-                  <version>${maven.required.version}</version>
-                </requireMavenVersion>
-              </rules>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
 
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>${maven.site.plugin.version}</version>
+        </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>failsafe-maven-plugin</artifactId>
@@ -403,6 +391,27 @@
                 <goal>display-dependency-updates</goal>
                 <goal>display-plugin-updates</goal>
               </goals>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>${maven.enforcer.plugin.version}</version>
+          <executions>
+            <execution>
+              <id>enforce-maven</id>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <requireMavenVersion>
+                    <version>${maven.required.version}</version>
+                  </requireMavenVersion>
+                </rules>
+              </configuration>
             </execution>
           </executions>
         </plugin>
@@ -568,14 +577,6 @@
         <version>${maven.javadoc.plugin.version}</version>
         <configuration>
           <encoding>${project.build.sourceEncoding}</encoding>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
-        <version>${findbugs.maven.plugin.version}</version>
-        <configuration>
-          <excludeFilterFile>file://${project.build.directory}/plugin-config/findbugs/hotels-findbugs-exclude.xml</excludeFilterFile>
         </configuration>
       </plugin>
       <plugin>

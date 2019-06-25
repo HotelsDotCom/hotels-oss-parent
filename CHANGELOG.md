@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.0.1] - TBD
+## [4.0.2] - TBD
 ### Added
 - Added a check-for-updates profile which verifies if there are dependencies that can be upgraded.
 ### Changed
@@ -18,6 +18,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Updated `maven-source-plugin` version to 3.1.0 (was 3.0.1).
 - Updated `maven-source-plugin` version to 3.1.0 (was 3.0.1).
 - Updated `jacoco-surefire-plugin` version to 2.22.2 (was 2.22.0).
+
+## [4.0.1] - 2019-03-01
+### Changed
+- Default Copyright line changed to "Expedia, Inc.".
+
+## [4.0.0] - 2019-01-28
+### Removed
+- Removed `findbugs-maven-plugin` from reporting as it's not compatible with JDK versions greater than 1.8.
+
+## [3.0.1] - 2019-01-24
+### Changed
+- Added `maven-site-plugin` to `pluginManagement` section.
 
 ## [3.0.0] - 2019-01-24
 ### Changed
