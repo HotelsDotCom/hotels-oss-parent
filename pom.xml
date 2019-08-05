@@ -190,13 +190,14 @@
       <plugin>
         <groupId>com.github.spotbugs</groupId>
         <artifactId>spotbugs-maven-plugin</artifactId>
-        <version>3.1.12</version>
+        <version>3.1.12.2</version>
         <configuration>
           <encoding>${project.build.sourceEncoding}</encoding>
           <xmlOutput>true</xmlOutput>
           <effort>Max</effort>
           <threshold>Low</threshold>
-          <excludeFilterFile>file://${project.build.directory}/plugin-config/findbugs/hotels-findbugs-exclude.xml</excludeFilterFile>
+          <excludeFilterFile>${findbugs.config}</excludeFilterFile>
+          <spotbugsXmlOutputFilename>findbugsXml.xml</spotbugsXmlOutputFilename>
         </configuration>
       </plugin>
       <plugin>
