@@ -44,6 +44,7 @@
     <coveralls.maven.plugin.version>4.3.0</coveralls.maven.plugin.version>
     <failsafe.maven.plugin.version>2.22.0</failsafe.maven.plugin.version>
     <findbugs.maven.plugin.version>3.0.5</findbugs.maven.plugin.version>
+    <spotbugs.maven.plugin.version>3.1.12.2</spotbugs.maven.plugin.version>
     <hotels.oss.plugin.config.version>1.2.2</hotels.oss.plugin.config.version>
     <jacoco.version>0.8.4</jacoco.version>
     <jdk.version>1.8</jdk.version>
@@ -184,20 +185,19 @@
           <xmlOutput>true</xmlOutput>
           <effort>Max</effort>
           <threshold>Low</threshold>
-          <excludeFilterFile>${findbugs.config}</excludeFilterFile>
+          <excludeFilterFile>${project.build.directory}/plugin-config/findbugs/hotels-findbugs-exclude.xml</excludeFilterFile>
         </configuration>
       </plugin>
       <plugin>
         <groupId>com.github.spotbugs</groupId>
         <artifactId>spotbugs-maven-plugin</artifactId>
-        <version>3.1.12.2</version>
+        <version>${spotbugs.maven.plugin.version}</version>
         <configuration>
           <encoding>${project.build.sourceEncoding}</encoding>
           <xmlOutput>true</xmlOutput>
           <effort>Max</effort>
           <threshold>Low</threshold>
-          <excludeFilterFile>${findbugs.config}</excludeFilterFile>
-          <spotbugsXmlOutputFilename>findbugsXml.xml</spotbugsXmlOutputFilename>
+          <excludeFilterFile>${project.build.directory}/plugin-config/findbugs/hotels-findbugs-exclude.xml</excludeFilterFile>
         </configuration>
       </plugin>
       <plugin>
@@ -539,44 +539,6 @@
         </plugins>
       </build>
     </profile>
-    <!--profile>
-      <id>spotbugs-active</id>
-      <activation>
-        <jdk>[1.8,)</jdk>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>com.github.spotbugs</groupId>
-            <artifactId>spotbugs-maven-plugin</artifactId>
-            <version>3.1.12</version>
-            <configuration>
-              <encoding>${project.build.sourceEncoding}</encoding>
-              <xmlOutput>true</xmlOutput>
-              <effort>Max</effort>
-              <threshold>Low</threshold>
-              <excludeFilterFile>file://${project.build.directory}/plugin-config/findbugs/hotels-findbugs-exclude.xml</excludeFilterFile>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-      <reporting>
-        <plugins>
-          <plugin>
-            <groupId>com.github.spotbugs</groupId>
-            <artifactId>spotbugs-maven-plugin</artifactId>
-            <version>3.1.12</version>
-            <configuration>
-              <encoding>${project.build.sourceEncoding}</encoding>
-              <xmlOutput>true</xmlOutput>
-              <effort>Max</effort>
-              <threshold>Low</threshold>
-              <excludeFilterFile>file://${project.build.directory}/plugin-config/findbugs/hotels-findbugs-exclude.xml</excludeFilterFile>
-            </configuration>
-          </plugin>
-        </plugins>
-      </reporting>
-    </profile-->
   </profiles>
 
   <reporting>
