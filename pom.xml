@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.hotels</groupId>
@@ -11,8 +12,8 @@
   <name>Hotels.com Open Source Parent</name>
 
   <scm>
-    <connection>scm:git:git@github.com:HotelsDotCom/${project.artifactId}.git</connection>
-    <developerConnection>scm:git:git@github.com:HotelsDotCom/${project.artifactId}.git</developerConnection>
+    <connection>scm:git:https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/HotelsDotCom/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/HotelsDotCom/${project.artifactId}.git</developerConnection>
     <url>https://github.com/HotelsDotCom/hotels-oss-parent</url>
     <tag>HEAD</tag>
   </scm>
@@ -551,9 +552,9 @@
           </reportSet>
         </reportSets>
       </plugin>
-      <!-- The JXR plugin produces a cross-reference of the project's sources. 
+      <!-- The JXR plugin produces a cross-reference of the project's sources.
         The generated reports make it easier for the
-        user to reference or find specific lines of code. It is also handy 
+        user to reference or find specific lines of code. It is also handy
         when used with the PMD plugin for referencing errors found
         in the code. -->
       <plugin>
