@@ -12,8 +12,8 @@
   <name>Hotels.com Open Source Parent</name>
 
   <scm>
-    <connection>scm:git:https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com:HotelsDotCom/${project.artifactId}.git</connection>
-    <developerConnection>scm:git:https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com:HotelsDotCom/${project.artifactId}.git</developerConnection>
+    <connection>scm:git:https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/HotelsDotCom/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/HotelsDotCom/${project.artifactId}.git</developerConnection>
     <url>https://github.com/HotelsDotCom/hotels-oss-parent</url>
     <tag>HEAD</tag>
   </scm>
