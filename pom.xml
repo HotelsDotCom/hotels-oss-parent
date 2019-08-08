@@ -69,10 +69,10 @@
     <nexus.staging.maven.plugin.version>1.6.8</nexus.staging.maven.plugin.version>
     <lifecycle.mapping.version>1.0.0</lifecycle.mapping.version>
 
-    <!-- hcom specific plugin properties -->
-    <findbugs.config>file://${project.build.directory}//plugin-config/findbugs/hotels-findbugs-exclude.xml</findbugs.config>
-    <spotbugs.config>file://${project.build.directory}/plugin-config/findbugs/htels-spotbugs-exclude.xml</spotbugs.config>
-    <checkstyle.config>file://${project.build.directory}/plugin-config/checkstyle/hotels-checkstyle.xml</checkstyle.config>
+    <!-- hotels.com specific plugin properties -->
+    <findbugs.config>${project.build.directory}/plugin-config/findbugs/hotels-findbugs-exclude.xml</findbugs.config>
+    <spotbugs.config>${project.build.directory}/plugin-config/spotbugs/hotels-spotbugs-exclude.xml</spotbugs.config>
+    <checkstyle.config>${project.build.directory}/plugin-config/checkstyle/hotels-checkstyle.xml</checkstyle.config>
   </properties>
 
   <distributionManagement>
