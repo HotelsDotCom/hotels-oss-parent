@@ -45,7 +45,7 @@
     <failsafe.maven.plugin.version>2.22.0</failsafe.maven.plugin.version>
     <findbugs.maven.plugin.version>3.0.5</findbugs.maven.plugin.version>
     <spotbugs.maven.plugin.version>3.1.12.2</spotbugs.maven.plugin.version>
-    <hotels.oss.plugin.config.version>1.2.2</hotels.oss.plugin.config.version>
+    <hotels.oss.plugin.config.version>1.3.0</hotels.oss.plugin.config.version>
     <jacoco.version>0.8.4</jacoco.version>
     <jdk.version>1.8</jdk.version>
     <license.maven.plugin.version>3.0</license.maven.plugin.version>
@@ -106,7 +106,7 @@
                   <artifactId>hotels-oss-plugin-config</artifactId>
                   <version>${hotels.oss.plugin.config.version}</version>
                   <type>jar</type>
-                  <overWrite>false</overWrite>
+                  <overWrite>true</overWrite>
                   <outputDirectory>${project.build.directory}/plugin-config</outputDirectory>
                 </artifactItem>
               </artifactItems>

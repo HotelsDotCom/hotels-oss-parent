@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [4.2.0] - TBD
 ### Added
 - Added `spotbugs-maven-plugin`, version 3.1.12.2.
+### Changed
+- Updated `hotels-oss-plugin-config` version to 1.3.0 (was 1.2.2).
+- Changed `overWrite` to `true` in `maven-dependency-plugin` configuration.
 
 ## [4.1.0] - 2019-06-27
 ### Added
