@@ -44,6 +44,7 @@
     <coveralls.maven.plugin.version>4.3.0</coveralls.maven.plugin.version>
     <failsafe.maven.plugin.version>2.22.0</failsafe.maven.plugin.version>
     <findbugs.maven.plugin.version>3.0.5</findbugs.maven.plugin.version>
+    <spotless.maven.plugin.version>1.27.0</spotless.maven.plugin.version>
     <spotbugs.maven.plugin.version>3.1.12.2</spotbugs.maven.plugin.version>
     <hotels.oss.plugin.config.version>1.3.0</hotels.oss.plugin.config.version>
     <jacoco.version>0.8.4</jacoco.version>
@@ -88,6 +89,27 @@
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
+        <version>${spotless.maven.plugin.version}</version>
+        <executions>
+          <execution>
+            <phase>process-sources</phase>
+            <goals>
+              <goal>apply</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <java>
+            <removeUnusedImports />
+            <importOrder>
+              <order>\#java,\#javax,\#org,\#,\#com,\#com.expedia,\#com.expediagroup,\#com.hotels,java,javax,org,,com,com.expedia,com.expediagroup,com.hotels</order>
+            </importOrder>
+          </java>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
