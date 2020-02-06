@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [4.3.0] - 2020-02-05
+## [4.3.1] - 2020-02-06
+### Changed
+- Effectively the same as 4.3.0, just re-released due to Sonatype issues.
+
+## [4.3.0] - 2020-02-05 [YANKED]
+### Yanked
+- Timeouts during upload to Sonatype caused a partial release.
 ### Added
 - Added [Spotless Maven Plugin](https://github.com/diffplug/spotless/tree/master/plugin-maven), version 1.27.0 with 
   default import order matching most existing Java projects.
