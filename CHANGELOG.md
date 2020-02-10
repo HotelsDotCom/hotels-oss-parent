@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.0.0] - TBD
+### Changed
+- Renamed `travis` profile to `coveralls`.
+
 ## [4.3.1] - 2020-02-06
 ### Changed
 - Effectively the same as 4.3.0, just re-released due to Sonatype issues.

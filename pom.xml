@@ -3,7 +3,7 @@
 
   <groupId>com.hotels</groupId>
   <artifactId>hotels-oss-parent</artifactId>
-  <version>4.3.2-SNAPSHOT</version>
+  <version>5.0.0-SNAPSHOT</version>
   <description>Parent POM for Hotels.com open source projects</description>
   <packaging>pom</packaging>
   <url>https://github.com/HotelsDotCom/hotels-oss-parent</url>
@@ -543,7 +543,7 @@
       </build>
     </profile>
     <profile>
-      <id>travis</id>
+      <id>coveralls</id>
       <build>
         <plugins>
           <plugin>
