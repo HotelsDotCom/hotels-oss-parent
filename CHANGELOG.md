@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [6.1.0] - TBD
+## [6.1.0] - 2020-10-23
 ### Added
 - A `javadoc.source.version` property (set to `8` by default).
 
