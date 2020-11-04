@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [6.2.0] - 2020-11-04
 ### Changed
-- Moved versions-plugin-rules.xml to hotels-oss-plugin-config.
+- Moved `versions-plugin-rules.xml` to `hotels-oss-plugin-config`.
 
 ## [6.1.0] - 2020-10-23
 ### Added
