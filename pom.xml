@@ -44,7 +44,7 @@
     <findbugs.maven.plugin.version>3.0.5</findbugs.maven.plugin.version>
     <spotless.maven.plugin.version>1.27.0</spotless.maven.plugin.version>
     <spotbugs.maven.plugin.version>3.1.12.2</spotbugs.maven.plugin.version>
-    <hotels.oss.plugin.config.version>1.3.0</hotels.oss.plugin.config.version>
+    <hotels.oss.plugin.config.version>1.4.0</hotels.oss.plugin.config.version>
     <jacoco.version>0.8.4</jacoco.version>
     <javadoc.source.version>8</javadoc.source.version>
     <jdk.version>1.8</jdk.version>
@@ -401,7 +401,7 @@
           <artifactId>versions-maven-plugin</artifactId>
           <version>${maven.versions.plugin.version}</version>
           <configuration>
-            <rulesUri>file:///${project.basedir}/src/main/resources/versions-plugin-rules.xml</rulesUri>
+            <rulesUri>file:///${project.build.directory}/plugin-config/versions/versions-plugin-rules.xml</rulesUri>
           </configuration>
           <executions>
             <execution>
