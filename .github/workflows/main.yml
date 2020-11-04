@@ -2,7 +2,7 @@ name: build
 on: [push, pull_request]
 jobs:
   test:
-    name: Package and run all tests
+    name: Package
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
