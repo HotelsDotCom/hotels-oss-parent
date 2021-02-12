@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.hotels</groupId>
@@ -529,6 +531,15 @@
             <groupId>org.eluder.coveralls</groupId>
             <artifactId>coveralls-maven-plugin</artifactId>
             <version>${coveralls.maven.plugin.version}</version>
+            <dependencies>
+              <dependency>
+                <!-- TODO: this can be removed when a version of coveralls-maven-plugin 
+                  that supports Java >=11 is released -->
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>2.2.3</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
@@ -570,11 +581,10 @@
           </reportSet>
         </reportSets>
       </plugin>
-      <!-- The JXR plugin produces a cross-reference of the project's sources.
-        The generated reports make it easier for the
-        user to reference or find specific lines of code. It is also handy
-        when used with the PMD plugin for referencing errors found
-        in the code. -->
+      <!-- The JXR plugin produces a cross-reference of the project's sources. 
+        The generated reports make it easier for the user to reference or find specific 
+        lines of code. It is also handy when used with the PMD plugin for referencing 
+        errors found in the code. -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jxr-plugin</artifactId>

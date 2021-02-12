@@ -4,8 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [6.2.0] - 2020-11-04
+## [6.2.1] - TBD
 ### Added
+- A dependency on `javax.xml.bind:jaxb-api` for `coveralls-maven-plugin` so that it can be used with Java 11.
+
+## [6.2.0] - 2020-11-04
+### Changed
 - `.github/workflows/main.yml`.
 
 ### Changed
